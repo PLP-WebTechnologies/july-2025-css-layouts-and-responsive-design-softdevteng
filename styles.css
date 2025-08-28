@@ -1,0 +1,119 @@
+/* ============================
+   General Reset & Base Styles
+=============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ============================
+   Header Styles
+=============================== */
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ============================
+   Flexbox Section
+=============================== */
+.flex-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* ============================
+   Grid Section
+=============================== */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background-color: #2196F3;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ============================
+   Footer Styles
+=============================== */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ============================
+   Media Queries for Responsiveness
+=============================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .flex-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card, .grid-item {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
